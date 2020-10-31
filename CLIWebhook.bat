@@ -26,10 +26,6 @@ IF "%text%"=="--user" (
 GOTO u
 )
 
-IF "%avatar%" == "" ( 
-SET AVATAR=https://cdn1.iconfinder.com/data/icons/computer-techologies-outline-free/128/ic_discord_logo-512.png
-)
-
 
 curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"username\": \"%user%\", \"content\": \"%text%\"}" %webhook%
 cls
